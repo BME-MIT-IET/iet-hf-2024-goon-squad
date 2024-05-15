@@ -64,29 +64,29 @@ public class GraphicsPipe extends Graphics   {
     private String calculateStateSurfice(){
         switch (relative.getState()) {
             case NORMAL:
-            return "_no";
+                return "_no";
             case SLIPPERY:
-            return "_sl";
+                return "_sl";
             case STICKY:
                 return "_st";
-                default:
+            default:
                 return "_no";
-            }
-    }
-        /**
-         * Ezzel a függvénnyel frissítjük az eltárolt cső kinézetét.
-         * Lekéri az adott komponens adott állapotát és a szerint választja ki a képernyőn lévő képet.
-         */
-        public void update(){
-            picLabel.setBounds(relative.posX, relative.posY, 80, 80);
-            String stateString = "pipe";
-            stateString += calculateStateSurfice();
-            stateString += calculateStateBroken();
-            stateString += calculateStateWater();
-            ChangeAppearance(stateString);
         }
-        
-        void refresh (){picLabel = new JLabel(new ImageIcon(IMG));}
-        
     }
+    /**
+     * Ezzel a függvénnyel frissítjük az eltárolt cső kinézetét.
+     * Lekéri az adott komponens adott állapotát és a szerint választja ki a képernyőn lévő képet.
+     */
+    public void update(){
+        picLabel.setBounds(relative.posX, relative.posY, 80, 80);
+        String stateString = "pipe";
+        stateString += calculateStateSurfice();
+        stateString += calculateStateBroken();
+        stateString += calculateStateWater();
+        ChangeAppearance(stateString);
+    }
+    
+    void refresh (){picLabel = new JLabel(new ImageIcon(IMG));}
+    
+}
     
