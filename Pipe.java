@@ -3,6 +3,7 @@ import java.util.Random;
 public class Pipe extends Passive implements Notifiable{
     private boolean hasPlayer = false;
     private PipeState state = PipeState.NORMAL;
+    private Random random = new Random();
 
     public PipeState getState() {
         return state;
@@ -78,7 +79,7 @@ public class Pipe extends Passive implements Notifiable{
             }
             //A játékos elcsúszik a csőről
             else if(state == PipeState.SLIPPERY){
-                Random random = new Random();
+                
                 int tmpIdx = random.nextInt(2);
                 if(ActiveComponents[tmpIdx] == null){
                     if(tmpIdx == 0){
@@ -210,8 +211,7 @@ public class Pipe extends Passive implements Notifiable{
      */
     @Override
     public void Notify(){
-        Random rnd = new Random();
-        if(rnd.nextInt(10)<3){
+        if(random.nextInt(10)<3){
             state= PipeState.NORMAL;
             breakable = true;
         }

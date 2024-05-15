@@ -6,6 +6,7 @@ public class Pump extends Active implements Notifiable {
 	private int inputIndex; //Tárolja annak a kimenetének az indexét amelyikből folyik a víz a pumpán keresztül
 	private int outputIndex; //Tárolja annak a kimenetének az indexét amibe folyik a víz a pumpán keresztül
 	private boolean randomizable = true;
+	private Random r = new Random();
 
 	//Konstruktor
 	public Pump(String s,int X, int Y)
@@ -154,7 +155,7 @@ public class Pump extends Active implements Notifiable {
 	public void Notify()
 	{
 		if(randomizable) {
-			Random r = new Random();
+			
 			int ran =r.nextInt(50);
 			if(ran == 0)
 				if(!broken){
