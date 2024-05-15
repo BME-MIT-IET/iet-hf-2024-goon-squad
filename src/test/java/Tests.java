@@ -177,3 +177,4 @@ public class Tests
         Assertions.assertEquals("[HIBA] A(z) ci1 komponens 4. vegpontjan nem hozhato letre cso (a vegpont foglalt)!", testCmds.NewCommand("GeneratePipe:ci1,4"));
     }
 }
+//commit
