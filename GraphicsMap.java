@@ -2,6 +2,7 @@
 //Grafikus map
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GraphicsMap {
 
@@ -11,7 +12,7 @@ public class GraphicsMap {
      * Default Map konstruktor
      */
     GraphicsMap(){
-        GrafCompList = new ArrayList<Graphics>();
+        GrafCompList = new ArrayList<>();
     }
 
     /**

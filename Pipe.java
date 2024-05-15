@@ -139,18 +139,14 @@ public class Pipe extends Passive implements Notifiable{
      */
     @Override
     public boolean ChangeState(PipeState newState){
-        if (state==PipeState.NORMAL)
-        {
+
+        if(state != newState){
             state = newState;
             return true;
-        }
-        else if(newState==PipeState.NORMAL){
-            state = newState;
-            return true;
-        }
-        else{
+        }else{
             return false;
         }
+
     }
 
     /** Létrehoz az eredetivel (azzal amire meghívták) megegyező tulajdonságokkal
@@ -219,16 +215,14 @@ public class Pipe extends Passive implements Notifiable{
 
     @Override
     public int AddPoint(){
-        if(hasWater && broken) {
-            hasWater = false;
-            return -1;
-        }
-        else if(hasWater && !(ActiveComponents[0]!=null && ActiveComponents[1]!=null)){
+
+        boolean cond = hasWater && !(ActiveComponents[0]!=null && ActiveComponents[1]!=null);
+
+        if(broken || cond){
             hasWater = false;
             return -1;
         }
         return 0;
-
     }
 
     //Setters
