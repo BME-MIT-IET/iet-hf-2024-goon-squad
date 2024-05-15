@@ -10,7 +10,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ " 1-build-keretrendszer-és-ci-beüzemelése" ]
+    branches: [ "1-build-keretrendszer-és-ci-beüzemelése" ]
   pull_request:
     branches: [ "main" ]
 
