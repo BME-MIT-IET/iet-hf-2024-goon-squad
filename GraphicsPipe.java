@@ -46,72 +46,47 @@ public class GraphicsPipe extends Graphics   {
         return  picLabel2;
     }
 
-    /**
-     * Ezzel a függvénnyel frissítjük az eltárolt cső kinézetét.
-     * Lekéri az adott komponens adott állapotát és a szerint választja ki a képernyőn lévő képet.
-     */
-    public void update(){
-        picLabel.setBounds(relative.posX, relative.posY, 80, 80);
-        switch(relative.getState()){
-            case NORMAL :
-                if(relative.broken){
-                    if (relative.getHasWater()) {
-                        ChangeAppearance("pipe_no_br_hw");
-                    } else {
-                        ChangeAppearance("pipe_no_br_nw");
-                    }
-                }
-                else{
-                    if(relative.hasWater){
-                        ChangeAppearance("pipe_no_wk_hw");
-                    }
-                    else {
-                        ChangeAppearance("pipe_no_wk_nw");
-                    }
-                }
-                break;
+
+    /*
+     * Segédfüggvények az update függvény komplexitáscsökkentéséhez 
+    */
+
+    private String calculateStateBroken(){
+        if(relative.broken)
+            return "_br";
+        return "_wk";
+    }
+    private String calculateStateWater(){
+        if(relative.hasWater)
+            return "_hw";
+        return "_nw";
+    }
+    private String calculateStateSurfice(){
+        switch (relative.getState()) {
+            case NORMAL:
+            return "_no";
             case SLIPPERY:
-                if(relative.broken){
-                    if(relative.hasWater){
-                        ChangeAppearance("pipe_sl_br_hw");
-                    }
-                    else {
-                        ChangeAppearance("pipe_sl_br_nw");
-                    }
-                }
-                else{
-                    if(relative.hasWater){
-                        ChangeAppearance("pipe_sl_wk_hw");
-                    }
-                    else {
-                        ChangeAppearance("pipe_sl_wk_nw");
-                    }
-                }
-                break;
+            return "_sl";
             case STICKY:
-                if(relative.broken){
-                    if(relative.hasWater){
-                        ChangeAppearance("pipe_st_br_hw");
-                    }
-                    else {
-                        ChangeAppearance("pipe_st_br_nw");
-                    }
-                }
-                else{
-                    if(relative.hasWater){
-                        ChangeAppearance("pipe_st_wk_hw");
-                    }
-                    else {
-                        ChangeAppearance("pipe_st_wk_nw");
-                    }
-                }
-                break;
-            default:
-                break;
-
+                return "_st";
+                default:
+                return "_no";
+            }
+    }
+        /**
+         * Ezzel a függvénnyel frissítjük az eltárolt cső kinézetét.
+         * Lekéri az adott komponens adott állapotát és a szerint választja ki a képernyőn lévő képet.
+         */
+        public void update(){
+            picLabel.setBounds(relative.posX, relative.posY, 80, 80);
+            String stateString = "pipe";
+            stateString += calculateStateSurfice();
+            stateString += calculateStateBroken();
+            stateString += calculateStateWater();
+            ChangeAppearance(stateString);
         }
-    };
-
-    void refresh (){picLabel = new JLabel(new ImageIcon(IMG));}
-
-}
+        
+        void refresh (){picLabel = new JLabel(new ImageIcon(IMG));}
+        
+    }
+    
