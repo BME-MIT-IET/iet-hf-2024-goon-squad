@@ -30,48 +30,47 @@ public class Active extends SComponent{
 	 * @param toEndPoint hányadik kimenetére
 	 * A komponens amelybe be kell kötni a csövet.
 	 */
-	public boolean PipeRelocation(int endPoint,Active to,int toEndPoint)
-	{
-		if(to !=null) {
-
-			if (PassiveComponents[endPoint].ActiveComponents[0]!= null && PassiveComponents[endPoint].ActiveComponents[0].equals(this)) //Megnezzuk hogy ez az aktiv a keresett passzivnak hanyadik eleme.
-			{
-
-				if(PassiveComponents[endPoint].ActiveComponents[1]!=null){
-					try{
-
-						PassiveComponents[endPoint].ActiveComponents[1].Swap(PassiveComponents[endPoint], null);
-
-					}
-					catch (Exception e ){
-						e.printStackTrace();
-					}
-				}
-
-				PassiveComponents[endPoint].ActiveComponents[1] = to;//0
-
-			}
-
-			else if (PassiveComponents[endPoint].ActiveComponents[1]!= null&& PassiveComponents[endPoint].ActiveComponents[1].equals(this))
-			{
-
-				if(PassiveComponents[endPoint].ActiveComponents[0]!=null){
-
-					PassiveComponents[endPoint].ActiveComponents[0].Swap(PassiveComponents[endPoint], null);
-
-				}
-
-				PassiveComponents[endPoint].ActiveComponents[0] = to;//0
-
-			}
-			if(to.PassiveComponents[toEndPoint]==null)
-				to.PassiveComponents[toEndPoint]= PassiveComponents[endPoint];
-			else {
-				to.Swap(to.PassiveComponents[toEndPoint], PassiveComponents[endPoint]);
-			}
-			return true;
+	public boolean PipeRelocation(int endPoint,Active to,int toEndPoint){
+		if(to == null) {
+			return false;
 		}
-		return  false;
+
+		if (PassiveComponents[endPoint].ActiveComponents[0]!= null && PassiveComponents[endPoint].ActiveComponents[0].equals(this)) //Megnezzuk hogy ez az aktiv a keresett passzivnak hanyadik eleme.
+		{
+
+			if(PassiveComponents[endPoint].ActiveComponents[1]!=null){
+				try{
+
+					PassiveComponents[endPoint].ActiveComponents[1].Swap(PassiveComponents[endPoint], null);
+
+				}
+				catch (Exception e ){
+					e.printStackTrace();
+				}
+			}
+
+			PassiveComponents[endPoint].ActiveComponents[1] = to;//0
+
+		}
+
+		else if (PassiveComponents[endPoint].ActiveComponents[1]!= null&& PassiveComponents[endPoint].ActiveComponents[1].equals(this))
+		{
+
+			if(PassiveComponents[endPoint].ActiveComponents[0]!=null){
+
+				PassiveComponents[endPoint].ActiveComponents[0].Swap(PassiveComponents[endPoint], null);
+
+			}
+
+			PassiveComponents[endPoint].ActiveComponents[0] = to;//0
+
+		}
+		if(to.PassiveComponents[toEndPoint]==null)
+			to.PassiveComponents[toEndPoint]= PassiveComponents[endPoint];
+		else {
+			to.Swap(to.PassiveComponents[toEndPoint], PassiveComponents[endPoint]);
+		}
+		return true;
 	}
 
 	/**
@@ -112,5 +111,7 @@ public class Active extends SComponent{
 	public void setNeighbours(int i, Passive p){
 		PassiveComponents[i]=p;
 	}
-	public  void MoveWater(SComponent c){}
+	public  void MoveWater(SComponent c){
+		//only special Active components are capable of moving water.
+	}
 }
