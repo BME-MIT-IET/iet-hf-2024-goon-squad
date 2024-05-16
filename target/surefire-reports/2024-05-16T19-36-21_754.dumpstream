@@ -1,4 +1,4 @@
-# Created at 2024-05-16T19:29:01.303
+# Created at 2024-05-16T19:36:22.009
 Boot Manifest-JAR contains absolute paths in classpath 'D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

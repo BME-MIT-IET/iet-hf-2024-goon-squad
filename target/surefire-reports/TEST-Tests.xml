@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Tests" time="0.183" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Tests" time="0.188" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\kaloc\AppData\Local\Temp\surefire11096674490523989118\surefirebooter-20240516192901273_3.jar C:\Users\kaloc\AppData\Local\Temp\surefire11096674490523989118 2024-05-16T19-29-01_047-jvmRun1 surefire-20240516192901273_1tmp surefire_0-20240516192901273_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\kaloc\AppData\Local\Temp\surefire9662582848738320527\surefirebooter-20240516193621978_3.jar C:\Users\kaloc\AppData\Local\Temp\surefire9662582848738320527 2024-05-16T19-36-21_754-jvmRun1 surefire-20240516193621978_1tmp surefire_0-20240516193621978_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\target\test-classes;D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\target\classes;C:\Users\kaloc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\kaloc\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kaloc\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kaloc\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\kaloc\AppData\Local\Temp\surefire11096674490523989118\surefirebooter-20240516192901273_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\kaloc\AppData\Local\Temp\surefire9662582848738320527\surefirebooter-20240516193621978_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.1+8-16"/>
@@ -61,20 +61,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="test10" classname="Tests" time="0.151"/>
-  <testcase name="test11" classname="Tests" time="0.002"/>
-  <testcase name="test12" classname="Tests" time="0.002"/>
+  <testcase name="test10" classname="Tests" time="0.149"/>
+  <testcase name="test11" classname="Tests" time="0.007"/>
+  <testcase name="test12" classname="Tests" time="0.003"/>
   <testcase name="test13" classname="Tests" time="0.002"/>
   <testcase name="test14" classname="Tests" time="0.002"/>
   <testcase name="test15" classname="Tests" time="0.002"/>
   <testcase name="test16" classname="Tests" time="0.001"/>
-  <testcase name="test1" classname="Tests" time="0.001"/>
+  <testcase name="test1" classname="Tests" time="0.002"/>
   <testcase name="test2" classname="Tests" time="0.002"/>
   <testcase name="test3" classname="Tests" time="0.001"/>
   <testcase name="test4" classname="Tests" time="0.002"/>
   <testcase name="test5" classname="Tests" time="0.001"/>
-  <testcase name="test6" classname="Tests" time="0"/>
+  <testcase name="test6" classname="Tests" time="0.001"/>
   <testcase name="test7" classname="Tests" time="0.001"/>
   <testcase name="test8" classname="Tests" time="0.001"/>
-  <testcase name="test9" classname="Tests" time="0.001"/>
+  <testcase name="test9" classname="Tests" time="0"/>
 </testsuite>
