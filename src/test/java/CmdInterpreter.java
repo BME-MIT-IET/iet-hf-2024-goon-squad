@@ -29,6 +29,8 @@ public class CmdInterpreter {
 	 */
 	private ArrayList<String> outputs = new ArrayList<String>();
 
+	private Map map = new Map();
+
 	/**
 	 * Eltarolja hany akcio pont kell, hogy a jatekos cselekedni tudjon.
 	 */
@@ -43,8 +45,6 @@ public class CmdInterpreter {
 	{
 		init();
 	}
-	
-	private Main main;
 
 	/**
 	 * Lekezeli a parancsok helyesseget.
@@ -188,7 +188,7 @@ public class CmdInterpreter {
 				}
 				s.setPosition(pos);
 			}
-			return "[SIKERES]: " + args[0] + " uj pozicio beallitva\n\t>Nev: " + args[0] + "\n\t>Uj pozicio: " + args[1];	
+			return "[SIKERES]: " + args[0] + " uj pozicio beallitva\n\t>Nev: " + args[0] + "\n\t>Uj pozicio: " + args[1];
 		}
 	}
 	/**
@@ -301,7 +301,7 @@ public class CmdInterpreter {
 					{
 						return "[HIBA] Tul sok pumpat helyeztek mar le a jatek soran (>10000 db)";
 					}
-					//components.put(gID,main.map.getComponents().get(main.map.getComponents().size()-1));
+					//components.put(gID,map.getComponents().get(map.getComponents().size()-1));
 					return "[SIKERES] A(z) " + args[0] + " jatekos lehelyezett egy pumpat";
 				case "slippery":
 					if(!team2.containsKey(args[0]))
@@ -404,7 +404,7 @@ public class CmdInterpreter {
 				}
 				s.setPosition(pos);
 			}
-			return "[SIKERES]: A(z) " + args[0] + " sikeresen megszokott\n\t>Nev: " + args[0] + "\n\t>Uj pozicio: " + args[1];	
+			return "[SIKERES]: A(z) " + args[0] + " sikeresen megszokott\n\t>Nev: " + args[0] + "\n\t>Uj pozicio: " + args[1];
 		}
 	}
 	/**
@@ -614,7 +614,7 @@ public class CmdInterpreter {
 			{
 				return "[HIBA] Tul sok cso generalodott mar a jatek soran (>10000 db)";
 			}
-			return "[SIKERES] Cso generalva a(z) " + args[0] + " komponens " + args[1] + ". vegpontjan (ID: " + gID + ")";  
+			return "[SIKERES] Cso generalva a(z) " + args[0] + " komponens " + args[1] + ". vegpontjan (ID: " + gID + ")";
 		}
 	}
 	/**
@@ -782,7 +782,7 @@ public class CmdInterpreter {
 		}
 		if(randomEnabled)
 		{
-			for(Notifiable c : main.notifiableList)
+			for(Notifiable c : Main.notifiableList)
 			{
 				c.Notify();
 			}
@@ -791,9 +791,9 @@ public class CmdInterpreter {
 		{
 			c.MoveWater(c);
 		}
-		main.sb.TallyPoints(main.map);
-		
-		return "[SIKERES] A kornek vege\n>[JELENLEGI ALLAS]:\n>Szerelok: " + main.sb.getMechPoints() + "\n>Szabotorok: " + main.sb.getSabPoints();
+		Main.sb.TallyPoints(map);
+
+		return "[SIKERES] A kornek vege\n>[JELENLEGI ALLAS]:\n>Szerelok: " + Main.sb.getMechPoints() + "\n>Szabotorok: " + Main.sb.getSabPoints();
 	}
 	/**
 	 * A parancs egy teszteset befejezésére, a létrehozott/importált
@@ -805,8 +805,8 @@ public class CmdInterpreter {
 		components.clear();
 		team1.clear();
 		team2.clear();
-		main.map.getComponents().clear();
-		main.sb.resetpoints();
+		map.getComponents().clear();
+		Main.sb.resetpoints();
 		randomEnabled = false;
 		return "[SIKERES] Uj teszteset letrehozva!";
 	}
@@ -876,7 +876,7 @@ public class CmdInterpreter {
 		{
 			if(!arg.equals(""))
 			{
-				args.add(arg);	
+				args.add(arg);
 			}
 		}
 		if(args.size() != argCount)
@@ -941,24 +941,24 @@ public class CmdInterpreter {
 			String visszaTeres= "[SIKERES]: Komponens sikeresen létrehozva";
 			visszaTeres+= "\n>\tNev: "+args[0];
 			switch (args[1].toUpperCase()) {
-				case "PUMP":Pump pu = new Pump(args[0], xpos, ypos); components.put(args[0],pu); main.notifiableList.add(pu);
-					main.map.addComponents(pu);
-					pu.setMap(main.map);
+				case "PUMP":Pump pu = new Pump(args[0], xpos, ypos); components.put(args[0],pu); Main.notifiableList.add(pu);
+					map.addComponents(pu);
+					pu.setMap(map);
 					visszaTeres+= "\n>\tTipus: Pump";
 					break;
-				case "PIPE":Pipe pi = new Pipe(args[0], xpos, ypos); components.put(args[0],pi);  main.notifiableList.add(pi);
-					main.map.addComponents(pi);
-					pi.setMap(main.map);
+				case "PIPE":Pipe pi = new Pipe(args[0], xpos, ypos); components.put(args[0],pi);  Main.notifiableList.add(pi);
+					map.addComponents(pi);
+					pi.setMap(map);
 					visszaTeres+= "\n>\tTipus: Pipe";
 					break;
-				case "CISTERN":Cistern c = new Cistern(args[0], xpos, ypos);components.put(args[0],c); main.notifiableList.add(c);
-					main.map.addComponents(c);
-					c.setMap(main.map);
+				case "CISTERN":Cistern c = new Cistern(args[0], xpos, ypos);components.put(args[0],c); Main.notifiableList.add(c);
+					map.addComponents(c);
+					c.setMap(map);
 					visszaTeres+= "\n>\tTipus: Cistern";
 					break;
 				case "SPRING":Spring s = new Spring(args[0], xpos, ypos);components.put(args[0],s);
-					main.map.addComponents(s);
-					s.setMap(main.map);
+					map.addComponents(s);
+					s.setMap(map);
 					visszaTeres+= "\n>\tTipus: Spring";
 					break;
 			}
@@ -1343,8 +1343,8 @@ public class CmdInterpreter {
 	 * pálya pillanatnyi állapotában.
 	 */
 	private String CalculatePoints(String cmd){
-		main.sb.TallyPoints(main.map);
-		return "[JELENLEGI ALLAS]:\n>Szerelok: " + main.sb.getMechPoints() + "\n>Szabotorok: " + main.sb.getSabPoints();
+		Main.sb.TallyPoints(map);
+		return "[JELENLEGI ALLAS]:\n>Szerelok: " + Main.sb.getMechPoints() + "\n>Szabotorok: " + Main.sb.getSabPoints();
 	}
 	/**
 	 * A parancs a tesztelés során írt parancsok és kapott kimenetek
