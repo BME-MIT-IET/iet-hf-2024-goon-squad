@@ -12,13 +12,6 @@ public class Tests
         testCmds = new CmdInterpreter();
     }
 
-    @Test
-    public void test0()
-    {
-        Assertions.assertEquals("[SIKERES] testmap.txt betoltve", testCmds.NewCommand("Load:testmap.txt"));
-    }
-
-    /*
     //Szerelo vegig lep komponenseken
     @Test
     public void test1()
@@ -183,5 +176,4 @@ public class Tests
         Assertions.assertEquals("[HIBA]: nem lehet letrehozni a pumpat a ci1 komponensen, mert mar van rajta egy masik", testCmds.NewCommand("GeneratePump:ci1"));
         Assertions.assertEquals("[HIBA] A(z) ci1 komponens 4. vegpontjan nem hozhato letre cso (a vegpont foglalt)!", testCmds.NewCommand("GeneratePipe:ci1,4"));
     }
-    */
 }
