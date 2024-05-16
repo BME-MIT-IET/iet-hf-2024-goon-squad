@@ -838,7 +838,7 @@ public class CmdInterpreter {
 					line = fr.nextLine();
 					if(!line.equals("") && line.charAt(0) != '>')
 					{
-						//NewCommand(line);
+						NewCommand(line);
 					}
 				}
 				fr.close();
