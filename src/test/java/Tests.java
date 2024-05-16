@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class Tests
 {
-    CmdInterpreter testCmds = new CmdInterpreter();
+    CmdInterpreter testCmds;
 
     @BeforeEach
     public void setup() 
