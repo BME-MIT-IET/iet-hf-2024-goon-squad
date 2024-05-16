@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class Tests
 {
-    CmdInterpreter testCmds;
+    CmdInterpreter testCmds = new CmdInterpreter();
 
     @BeforeEach
     public void setup() 
@@ -101,9 +101,15 @@ public class Tests
         Assertions.assertEquals("[SIKERES] A(z) me1 jatekos lehelyezett egy pumpat", testCmds.NewCommand("PlayerSimpleAction:me1,place"));
     }
 
-    //Egy pumpa elromlik (majd megprobal vizet szallitani)
     @Test
     public void test10()
+    {
+        Assertions.assertEquals("[", "[");
+    }
+
+    //Egy pumpa elromlik (majd megprobal vizet szallitani)
+    @Test
+    public void test37()
     {
         Assertions.assertEquals("[SIKERES] testmap.txt betoltve", testCmds.NewCommand("Load:testmap.txt"));
         Assertions.assertEquals("[SIKERES] pu1 komponens elrontva", testCmds.NewCommand("BreakPump:pu1"));
