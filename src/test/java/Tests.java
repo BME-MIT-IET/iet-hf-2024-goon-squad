@@ -15,7 +15,7 @@ public class Tests
     @Test
     public void test0()
     {
-        Assertions.assertEquals("[", "[");
+        Assertions.assertEquals("Fixed", testCmds.Fixed());
     }
 
     /*

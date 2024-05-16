@@ -44,6 +44,11 @@ public class CmdInterpreter {
 		init();
 	}
 
+	public String Fixed()
+	{
+		return "Fixed";
+	}
+
 	/**
 	 * Lekezeli a parancsok helyesseget.
 	 */
