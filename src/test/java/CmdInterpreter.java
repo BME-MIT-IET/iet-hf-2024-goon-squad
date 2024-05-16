@@ -831,8 +831,8 @@ public class CmdInterpreter {
 			try
 			{
 				File loadFile = new File("src/test/resources/" + args[0]);
-				/*Scanner fr = new Scanner(loadFile);
-				String line;
+				Scanner fr = new Scanner(loadFile);
+				/*String line;
 				while(fr.hasNextLine())
 				{
 					line = fr.nextLine();
@@ -842,8 +842,8 @@ public class CmdInterpreter {
 						//System.out.println(NewCommand(line));
 					}
 				}
-				fr.close();
 				*/
+				fr.close();
 				return "[SIKERES] " + args[0] + " betoltve";
 			}
 			catch(Exception e)
