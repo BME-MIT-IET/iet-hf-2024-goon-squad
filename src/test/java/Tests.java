@@ -15,7 +15,7 @@ public class Tests
     @Test
     public void test0()
     {
-        Assertions.assertEquals("Fixed", testCmds.Fixed());
+        Assertions.assertEquals("[SIKERES]: me1 uj pozicio beallitva\n" + "\t>Nev: me1\n" + "\t>Uj pozicio: sp1", testCmds.NewCommand("SetPlayerPos:me1,sp1"));
     }
 
     /*
