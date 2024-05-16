@@ -832,17 +832,16 @@ public class CmdInterpreter {
 			{
 				File loadFile = new File("src/test/resources/" + args[0]);
 				Scanner fr = new Scanner(loadFile);
-				/*String line;
-				while(fr.hasNextLine())
+				String line;
+				while(!fr.hasNextLine())
 				{
-					line = fr.nextLine();
+					/*line = fr.nextLine();
 					if(!line.equals("") && line.charAt(0) != '>')
 					{
 						NewCommand(line);
 						//System.out.println(NewCommand(line));
-					}
+					}*/
 				}
-				*/
 				fr.close();
 				return "[SIKERES] " + args[0] + " betoltve";
 			}
