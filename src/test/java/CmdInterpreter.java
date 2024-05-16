@@ -43,11 +43,8 @@ public class CmdInterpreter {
 	{
 		init();
 	}
-
-	public String Fixed()
-	{
-		return "Fixed";
-	}
+	
+	private Main main;
 
 	/**
 	 * Lekezeli a parancsok helyesseget.
@@ -304,7 +301,7 @@ public class CmdInterpreter {
 					{
 						return "[HIBA] Tul sok pumpat helyeztek mar le a jatek soran (>10000 db)";
 					}
-					//components.put(gID,Main.map.getComponents().get(Main.map.getComponents().size()-1));
+					//components.put(gID,main.map.getComponents().get(main.map.getComponents().size()-1));
 					return "[SIKERES] A(z) " + args[0] + " jatekos lehelyezett egy pumpat";
 				case "slippery":
 					if(!team2.containsKey(args[0]))
@@ -785,7 +782,7 @@ public class CmdInterpreter {
 		}
 		if(randomEnabled)
 		{
-			for(Notifiable c : Main.notifiableList)
+			for(Notifiable c : main.notifiableList)
 			{
 				c.Notify();
 			}
@@ -794,9 +791,9 @@ public class CmdInterpreter {
 		{
 			c.MoveWater(c);
 		}
-		Main.sb.TallyPoints(Main.map);
+		main.sb.TallyPoints(main.map);
 		
-		return "[SIKERES] A kornek vege\n>[JELENLEGI ALLAS]:\n>Szerelok: " + Main.sb.getMechPoints() + "\n>Szabotorok: " + Main.sb.getSabPoints();
+		return "[SIKERES] A kornek vege\n>[JELENLEGI ALLAS]:\n>Szerelok: " + main.sb.getMechPoints() + "\n>Szabotorok: " + main.sb.getSabPoints();
 	}
 	/**
 	 * A parancs egy teszteset befejezésére, a létrehozott/importált
@@ -808,8 +805,8 @@ public class CmdInterpreter {
 		components.clear();
 		team1.clear();
 		team2.clear();
-		Main.map.getComponents().clear();
-		Main.sb.resetpoints();
+		main.map.getComponents().clear();
+		main.sb.resetpoints();
 		randomEnabled = false;
 		return "[SIKERES] Uj teszteset letrehozva!";
 	}
@@ -944,24 +941,24 @@ public class CmdInterpreter {
 			String visszaTeres= "[SIKERES]: Komponens sikeresen létrehozva";
 			visszaTeres+= "\n>\tNev: "+args[0];
 			switch (args[1].toUpperCase()) {
-				case "PUMP":Pump pu = new Pump(args[0], xpos, ypos); components.put(args[0],pu); Main.notifiableList.add(pu);
-					Main.map.addComponents(pu);
-					pu.setMap(Main.map);
+				case "PUMP":Pump pu = new Pump(args[0], xpos, ypos); components.put(args[0],pu); main.notifiableList.add(pu);
+					main.map.addComponents(pu);
+					pu.setMap(main.map);
 					visszaTeres+= "\n>\tTipus: Pump";
 					break;
-				case "PIPE":Pipe pi = new Pipe(args[0], xpos, ypos); components.put(args[0],pi);  Main.notifiableList.add(pi);
-					Main.map.addComponents(pi);
-					pi.setMap(Main.map);
+				case "PIPE":Pipe pi = new Pipe(args[0], xpos, ypos); components.put(args[0],pi);  main.notifiableList.add(pi);
+					main.map.addComponents(pi);
+					pi.setMap(main.map);
 					visszaTeres+= "\n>\tTipus: Pipe";
 					break;
-				case "CISTERN":Cistern c = new Cistern(args[0], xpos, ypos);components.put(args[0],c); Main.notifiableList.add(c);
-					Main.map.addComponents(c);
-					c.setMap(Main.map);
+				case "CISTERN":Cistern c = new Cistern(args[0], xpos, ypos);components.put(args[0],c); main.notifiableList.add(c);
+					main.map.addComponents(c);
+					c.setMap(main.map);
 					visszaTeres+= "\n>\tTipus: Cistern";
 					break;
 				case "SPRING":Spring s = new Spring(args[0], xpos, ypos);components.put(args[0],s);
-					Main.map.addComponents(s);
-					s.setMap(Main.map);
+					main.map.addComponents(s);
+					s.setMap(main.map);
 					visszaTeres+= "\n>\tTipus: Spring";
 					break;
 			}
@@ -1346,8 +1343,8 @@ public class CmdInterpreter {
 	 * pálya pillanatnyi állapotában.
 	 */
 	private String CalculatePoints(String cmd){
-		Main.sb.TallyPoints(Main.map);
-		return "[JELENLEGI ALLAS]:\n>Szerelok: " + Main.sb.getMechPoints() + "\n>Szabotorok: " + Main.sb.getSabPoints();
+		main.sb.TallyPoints(main.map);
+		return "[JELENLEGI ALLAS]:\n>Szerelok: " + main.sb.getMechPoints() + "\n>Szabotorok: " + main.sb.getSabPoints();
 	}
 	/**
 	 * A parancs a tesztelés során írt parancsok és kapott kimenetek
