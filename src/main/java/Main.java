@@ -20,7 +20,7 @@ public class Main {
     static int roundNums = 30;
     static int activePlayerIndex = 0;
     static Player activePlayer;
-    static Renderer renderer;
+    static Renderer renderer = new Renderer();
     public static void main(String[] args) {
         gameKeyListener= new GameKeyListener(gmap);
         renderer.frame.setSize(1280,720);
