@@ -3,6 +3,7 @@ import java.util.Random;
 public class Pipe extends Passive implements Notifiable{
     private boolean hasPlayer = false;
     private PipeState state = PipeState.NORMAL;
+    private Random random = new Random();
 
     public PipeState getState() {
         return state;
@@ -78,7 +79,7 @@ public class Pipe extends Passive implements Notifiable{
             }
             //A játékos elcsúszik a csőről
             else if(state == PipeState.SLIPPERY){
-                Random random = new Random();
+                
                 int tmpIdx = random.nextInt(2);
                 if(ActiveComponents[tmpIdx] == null){
                     if(tmpIdx == 0){
@@ -138,18 +139,14 @@ public class Pipe extends Passive implements Notifiable{
      */
     @Override
     public boolean ChangeState(PipeState newState){
-        if (state==PipeState.NORMAL)
-        {
+
+        if(state != newState){
             state = newState;
             return true;
-        }
-        else if(newState==PipeState.NORMAL){
-            state = newState;
-            return true;
-        }
-        else{
+        }else{
             return false;
         }
+
     }
 
     /** Létrehoz az eredetivel (azzal amire meghívták) megegyező tulajdonságokkal
@@ -210,8 +207,7 @@ public class Pipe extends Passive implements Notifiable{
      */
     @Override
     public void Notify(){
-        Random rnd = new Random();
-        if(rnd.nextInt(10)<3){
+        if(random.nextInt(10)<3){
             state= PipeState.NORMAL;
             breakable = true;
         }
@@ -219,16 +215,14 @@ public class Pipe extends Passive implements Notifiable{
 
     @Override
     public int AddPoint(){
-        if(hasWater && broken) {
-            hasWater = false;
-            return -1;
-        }
-        else if(hasWater && !(ActiveComponents[0]!=null && ActiveComponents[1]!=null)){
+
+        boolean cond = hasWater && !(ActiveComponents[0]!=null && ActiveComponents[1]!=null);
+
+        if(broken || cond){
             hasWater = false;
             return -1;
         }
         return 0;
-
     }
 
     //Setters

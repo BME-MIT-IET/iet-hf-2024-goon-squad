@@ -6,6 +6,7 @@ public class Cistern extends Active implements Notifiable {
 	private Pump Pump; //Tárolja a ciszternánál lévő generált pumpát
 	private int generate; //Ez majd egy random lesz a gyakorlatban, és csak a Notify-on belül fog létezni [TESZTELÉSHEZ]
 	private boolean randomizable = true;
+	private Random r = new Random();
 	private  int waterCounter;
 	//Konstruktor
 	public Cistern(String s,int X, int Y)
@@ -127,7 +128,6 @@ public class Cistern extends Active implements Notifiable {
 	public void Notify()
 	{
 		if(randomizable) {
-			Random r = new Random();
 			generate=r.nextInt(50);
 
 
