@@ -42,7 +42,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
     Given that a pipe has been punctured
     and I am a Mechanic
     and I am standing on the pipe
-    and I have enough AP left,
+    and I have enough AP,
     when I fix the pipe,
     then it should be functional again.
 
@@ -51,7 +51,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
     Given that a pipe has been punctured
     and I am a Mechanic
     and I am standing on the pipe
-    and I don't have enough AP left,
+    and I don't have enough AP,
     when I try to fix the pipe,
     then the pipe shouldn't be fixed.
 
@@ -71,7 +71,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
 
 ---
 
-**Title: Saboteur standing on a pipe attempts to puncture it.**
+**Title: Player standing on a pipe attempts to puncture it.**
 
     As a Player,
     I want to be able to puncture pipes while standing on them,
@@ -81,7 +81,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
 
     Given that a pipe is working
     and I am standing on the pipe
-    and I have enough AP left,
+    and I have enough AP,
     when I puncture the pipe,
     then it should be punctured.
 
@@ -89,7 +89,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
 
     Given that a pipe is working
     and I am standing on the pipe
-    and I don't have enough AP left,
+    and I don't have enough AP,
     when I attempt to puncture the pipe,
     then the pipe shouldn't get punctured.
 
@@ -97,7 +97,7 @@ A tesztek specifikációja a BDD szabványt követi. Egy címmel (*Title*) kezd�
 
     Given that a pipe is punctured
     and I am standing on the pipe
-    and I have enough AP left,
+    and I have enough AP,
     when I attempt to puncture the pipe,
     then the pipe shouldn't be punctured again.
 
@@ -278,9 +278,15 @@ A `Cucumber` használatához szükség van `Maven` (vagy `Gradle`) setup-olásá
 
 Ezek után el is kezdhettem a tesztek implementálását.
 
-**Feature file-ok elkészítése**
+**Feature file-ok elkészítése és feltöltése**
 
-**Lépésdefiníciós file-ok elkészítése**
+A teszteléshez szükséges `.feature` fájlokat a `src > test > resources` mappában hozom létre, mind a 8 tesztelendő funkciónak külön fájlt biztosítva. Ezekbe a fájlokba bemásolom a specifikált teszteseteket, majd egy-két helyen módosítom őket, hogy a fordító számára értelmezhető legyen a bemenet (sorok elején nagy kezdőbetű, Title helyett Feature, Scenario-k sorszámának törlése, egyéb kis formázások).
+
+Végeredményül az alábbi fájlokat kapom:
+
+![Feature files](images/featurefiles.png)
+
+Eljött az idő a lépések definiáláshoz.
 
 **Lépésdefiníciók megírása**
 
