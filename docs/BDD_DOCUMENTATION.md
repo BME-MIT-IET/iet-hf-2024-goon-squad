@@ -6,9 +6,9 @@
 
 A feladatot három fázisra osztottam fel:
 
- *1. A tesztelendő funkciók meghatározása
- 2. A tesztelendő funkciók specifikációja a BDD szabályai szerint
- 3. A specifikált esetek implementálása*
+*1. A tesztelendő funkciók meghatározása
+2. A tesztelendő funkciók specifikációja a BDD szabályai szerint
+3. A specifikált esetek implementálása*
 
 ## Tesztelendő funkciók
 
@@ -16,14 +16,14 @@ Teszteseteknek nyolc olyan alapvető funckiót választottam, amelyek helyes mű
 
 **
 
- *1. Mechanic standing on a punctured pipe attempts to fix it
- 2. Player passes their turn
- 3. Player standing on a pipe attempts to puncture it
- 4. Cistern attempts to generate a pump
- 5. Mechanic attempts to collect a pump from a cistern
- 6. Saboteur standing on a pipe attempts to make it slippery
- 7. A pump experiences a breakdown
- 8. Player attempts to move from a pipe to one of its neighbouring components*
+*1. Mechanic standing on a punctured pipe attempts to fix it
+2. Player passes their turn
+3. Player standing on a pipe attempts to puncture it
+4. Cistern attempts to generate a pump
+5. Mechanic attempts to collect a pump from a cistern
+6. Saboteur standing on a pipe attempts to make it slippery
+7. A pump experiences a breakdown
+8. Player attempts to move from a pipe to one of its neighbouring components*
 
 ## Tesztek specifikációja
 
@@ -104,10 +104,10 @@ I want to be able to generate pumps (one at a time),
 so that they can be pe picked up and placed down by Mechanics.
 
 **Scenario 1:** A Cistern with no pump on it successfully generates a pump.
-Given that I am a Cistern 
+Given that I am a Cistern
 and I have no generated pumps,
 when it is time to generate a pump,
-then the pump should get generated. 
+then the pump should get generated.
 
 **Scenario 2:** A cistern with a pump on it already attempts to generate another one.
 Given that I am a Cistern
@@ -211,7 +211,7 @@ then nothing happens, as I am already broken.
 
 ---
 
- **Title: Player attempts to move from a pipe to one of its neighbouring components.**
+**Title: Player attempts to move from a pipe to one of its neighbouring components.**
 
 As a Player,
 I want to be able to move from pipes to one of their neighbouring components.
@@ -245,13 +245,17 @@ and I intend to move to a non-existing neighbour,
 when I attempt to move to the selected component,
 then the movement should be unsuccessful.
 
-## Tesztek implementációjának folyamata 
+## Tesztek implementációjának folyamata
 
 Elkészült a specifikáció, itt az ideje implementálni. Ehhez az egyik legnépszerűbb BDD implementációs szoftvert, a `Cucumber`-t fogom használni. Java fejlesztőkörnyezetnek az `IntelliJ IDEA`-t választottam.
 
-**
-
 **Cucumber setup-olása**
+
+A `Cucumber` használatához szükség van `Maven` (vagy `Gradle`) setup-olására. Ez az #1 számú Issue-ban megtörtént, és mivel az Issue-hoz tartozó branch be lett mergelve a `main`-be, ezért nekem csupán annyi volt a dolgom, hogy rebaseljem a branchemet a `main`-re, majd a `pom.xml` fájlban felvegyem dependency-k közé a `Cucumber` legfrissebb (7.17.0) verzióját:
+
+![Cucumber dependency](images/cucumberdependency.png)
+
+Ezek után el is kezdhettem a tesztek implementálását.
 
 **Feature file-ok elkészítése**
 

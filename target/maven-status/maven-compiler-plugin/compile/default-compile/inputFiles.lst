@@ -1,24 +1,24 @@
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsSpring.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Notifiable.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\SComponent.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsPipe.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsPump.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Cistern.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Scoreboard.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Saboteur.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Spring.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Pump.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GameKeyListener.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Map.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Pipe.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Graphics.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Mechanic.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Active.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsPlayer.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Main.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsMap.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Passive.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\MyFrame.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\PipeState.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\Player.java
-D:\Egyetem\Integrációs és ellenőrzési technikák\HF\iet-hf-2024-goon-squad\src\main\java\GraphicsCistern.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Spring.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\SComponent.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Passive.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsSpring.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Notifiable.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsMap.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Graphics.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GameKeyListener.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Saboteur.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Scoreboard.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Pipe.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsPlayer.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Cistern.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsCistern.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\PipeState.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Player.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsPipe.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\MyFrame.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Map.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Pump.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Main.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Active.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\GraphicsPump.java
+D:\sulie\uniXD\iet\iet-hf-2024-goon-squad\src\main\java\Mechanic.java
