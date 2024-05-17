@@ -73,7 +73,7 @@ public class Main {
     }
 
     private static void setupGame() throws FileNotFoundException {
-        File loadFile = new File("map.txt");
+        File loadFile = new File("src/main/resources/map.txt");
         Scanner fr = new Scanner(loadFile);
         String line;
         while(fr.hasNextLine())
