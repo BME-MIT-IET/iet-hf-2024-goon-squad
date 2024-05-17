@@ -34,3 +34,9 @@ A Github CI a **Java CI with Maven** sablon alapján lett kialakítva. A sablon 
 A munkafolyamat legnagyobb problémáját a fentiekben említett main osztályra történő referálás miatti hibaüzenetek okozták.
 
 ![Workflow futások](images/maven_workflow.png)
+
+## Eredmény
+A feladatnak köszönhetően a projekt a **Maven keretrendszert** implementálja, ezzel lehetővé téve a projekt hatékony tesztelését. A **Github Workflow** megvalósításával megkönnyítettem a többi feladat megvalósítását (és a jövőbeli fejlesztések implementálását), a módosítások végrehajtása után nem kell mindenkinek manuálisan tesztelnie, a tesztesetek automatikusan kiértékelődnek **push** és **pull request** események során.
+
+## Tanulság
+A feladat megvalósítása során egyértelművé vált, hogy a projekt elején érdemes lett volna a **Maven** keretrendszert bevezetni, ezzel megkönnyítve a későbbi munkákat. A projekt fejlesztése során mindig naprakészen kellett volna tartani a **CmdInterpreter** osztályt és a teszteket, hogy elkerüljük az elavulásból eredő jövőbeli problémákat.
