@@ -290,9 +290,23 @@ Eljött az idő a lépések definiáláshoz.
 
 **Lépésdefiníciók megírása**
 
+Az IntelliJ segítségével szerencsére egyszerűen legenerálható a `StepDefinitions.java` file, amely már tartalmazza az implementálandó lépések vázát (illetve új lépések is könnyen hozzáadhatók). Ezekben a generált függvényekben megírom a szükséges lépések implementációját. A függvényekbe kerülhetnek a CmdInterpreter osztály megfelelő parancsvégrehajtásai, értékadás segédváltozóknak (pl. aktív játékos eltárolása), illetve a *Then* típusú függvényekbe a a jUnit-ból már ismert *assertEquals* / *assertTrue*, amelyek segítségével ellenőrzni tudom, hogy a lépések eredményeként az elvárt kimenetet kapjuk-e. Extra lépésként kicsit módosítok a feature fájlokban definiált prekondíciók közül is néhányon (vagy a sorrendjükön), hogy csökkentsem a redundanciát. Pl.: a specifikációban különböző eseteknél az "I fix the pipe" és az "I try to fix the pipe" lépés is megtalálható, de mivel mindkettő esetén ugyanaz a parancs hajtódik végre a háttérben, ezért elég hogyha csak az egyik szerepel a feature fájlban.
+
 **Tesztek futtatása**
 
-**Eredmények analizálása**
+Miután egy funkció feature file-ja és a mögöttes lépésdefiníciók is rendelkezésre állnak, futtathatjuk az adott tesztet az IntelliJ segítségével. Ehhez egyszerűen jobb egérgombbal rákattintok a teszthez tartozó `.feature` file-ra, majd a megjelenő menüben a `"Run: Feature (...)"` opciót választom:
+
+![Run BDD test](images/runbddtest.png)
+
+Ekkor (hogyha mindent jól csináltam) megjelenik egy `Test Result` terminál ablak, ahol láthatom a teszt futásának eredményét:
+
+![BDD test results](images/bddtestresults.png)
+
+Ha a teszt futása sikertelen (pl. elírtam a CmdInterpreter valamelyik parancsát), akkor a terminálnak valami ilyesmit kell mutatnia:
+
+![Failed BDD test](images/failedbddtest.png)
+
+**Eredmények**
 
 **Tanulság**
 
