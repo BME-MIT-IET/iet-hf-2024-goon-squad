@@ -308,7 +308,93 @@ Ha a teszt futása sikertelen (pl. elírtam a CmdInterpreter valamelyik parancs�
 
 **Eredmények**
 
+Az összes tesztet lefuttattam, az esetlegesen felmerülő hibákat kijavítottam. Végeredményül az alábbi resultokat kaptam az egyes tesztek futtatása után:
+
+    mechanic_fixes_pipe.feature
+
+> Testing started at 4:05 ...
+>
+> 2 Scenarios (2 passed)
+> 12 Steps (12 passed)
+> 0m0.263s
+>
+> Process finished with exit code 0
+
+    player_passes.feature
+
+> Testing started at 4:07 ...
+>
+> 1 Scenarios (1 passed)
+> 3 Steps (3 passed)
+> 0m0.250s
+>
+> Process finished with exit code 0
+
+    player_punctures_pipe.feature
+
+> Testing started at 4:08 ...
+>
+> 3 Scenarios (3 passed)
+> 15 Steps (15 passed)
+> 0m0.313s
+>
+> Process finished with exit code 0
+
+    cistern_generates_pump.feature
+
+> Testing started at 4:03 ...
+>
+> 2 Scenarios (2 passed)
+> 8 Steps (8 passed)
+> 0m0.265s
+>
+> Process finished with exit code 0
+
+    mechanic_collects_pump.feature
+
+> Testing started at 4:04 ...
+>
+> 4 Scenarios (4 passed)
+> 27 Steps (27 passed)
+> 0m0.282s
+>
+> Process finished with exit code 0
+
+    saboteur_makes_pipe_slippery.feature
+
+> Testing started at 4:10 ...
+>
+> 3 Scenarios (3 passed)
+> 18 Steps (18 passed)
+> 0m0.331s
+>
+> Process finished with exit code 0
+
+    pump_breaks_down.feature
+
+> Testing started at 4:09 ...
+>
+> 2 Scenarios (2 passed)
+> 8 Steps (8 passed)
+> 0m0.269s
+>
+> Process finished with exit code 0
+
+    player_moves_from_pipe.feature
+
+> Testing started at 4:06 ...
+>
+> 4 Scenarios (4 passed)
+> 21 Steps (21 passed)
+> 0m0.286s
+>
+> Process finished with exit code 0
+
 **Tanulság**
+
+Én korábban még nem foglalkoztam BDD tesztek írásával, ezért ez az egész folyamat egy új élmény volt számomra. Forgatókönyveket már kellett írnom korábban, így azok kigondolása és átültetése BDD specifikációs formátumba nem okozott különösebb gondot. jUnit teszteket is írtam már, ezért az implementáció sem volt problémás, azonban mindenképpen egy új élmény volt, hogy ezt a két tevékenységet ilyen módon kombinálhattam és végeredményül működő teszteket kaptam. Azt meg kell jegyeznem, hogy a Maven + jUnit setupolása az #1-es Issue-ban nagyban hozzájárult ahhoz, hogy én is gördülékenyen tudtam a munkámat végezni, ehhez jó csapatmunkára volt szükség.
+
+Összeségében engem megnyert a BDD tesztelés, elképzelhetőnek tartom, hogy a jövőben is alkalmazni fogom más projekteken.
 
 ---
 > *Készítette: Czímer Bende*
