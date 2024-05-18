@@ -1,0 +1,6 @@
+# Sivatagi vízhálózat
+
+
+A játék egy stratégiai játék, amelyben négy játékos két csapatra oszlik: szerelőkre és nomád szabotőrökre. A játék célja, hogy a csapatok minél több pontot gyűjtsenek miközben a másik csapat tevékenységét akadályozzák. A játéktér a drukmákori sivatagban található, ahol egy bonyolult csőrendszer szállítja a vizet. A csőrendszer aktív elemekből (források, ciszternák, pumpák) és passzív csövekből áll, amelyek kezdetben egy működő rendszert alkotnak. A játék során új elemek jelennek meg, amelyeket a játékosok felhasználhatnak stratégiájuk részeként.
+
+A szerelők feladata a csőrendszer karbantartása, csövek és pumpák javítása, valamint a hálózat bővítése, hogy minél több vizet juttassanak el a ciszternákba. A nomád szabotőrök célja, hogy a csöveket kilyukasztva és a pumpákat átállítva minél több vizet elvesztegessenek. A játék körökre oszlik, minden kör végén pontokat kapnak a csapatok a tevékenységeik alapján: a szerelők a ciszternákba jutó víz mennyiségéért, a szabotőrök a kifolyt víz mennyiségéért. A csapatok különböző számú cselekmény pontokat kapnak szerepük alapján, és a győztes az a csapat lesz, amelyik több pontot szerez a játék végére.
